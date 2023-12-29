@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Audio Samples from "Learning Fine-Grained Controllability on Speech Generation via Efficient Fine-Tuning"
+    </title>
+    <style>
+        body {
+            margin: 0% 15%;
+            padding: 50px 30px;
+            background: #fff;
+            color: #111;
+            font-size: 17px;
+            font-family: sans-serif;
+            font-weight: 400;
+            line-height: 1.8;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1 {
+            font-size: 1.75em;
+        }
+
+        h2 {
+            margin-bottom: 0.4em;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Learning Fine-Grained Controllability on Speech Generation via Efficient Fine-Tuning</h1>
+
+    <p>
+    <div>
+        <b>Arxiv</b>: <a href="https://arxiv.org/abs/2011.06465">2011.06465</a>
+    </div>
+    <div>
+        <b>Authors</b>: Chung-Ming Chien, Andros Tjandra, Apoorv Vyas, Matt Le, Bowen Shi, Wei-ning Hsu
+    </div>
+    <div>
+        <b>Abstract</b>: As the scale of generative models continues to grow, the efficient reuse and adaptation of
+        pre-trained models have become crucial considerations. In this work, we propose Voicebox Adapter, a novel
+        approach that integrates fine-grained conditions into a pre-trained Voicebox speech generation model using a
+        cross-attention module. To ensure a smooth integration of newly introduced modules with the pre-trained ones, we
+        explore various efficient fine-tuning approaches. Our investigation reveals that the LoRA with bias-tuning
+        configuration yields the best performance, enhancing controllability without compromising the quality of
+        generated speech. Across three fine-grained conditional generation tasks, we empirically demonstrate the
+        efficacy of Voicebox Adapter and its remarkable resource efficiency. Follow-up experiments further highlight the
+        robustness of Voicebox Adapter across diverse training and data setups. Audio samples are available online to
+        showcase the speech generation and editing capabilities of Voicebox Adapter.
+    </div>
+    </p>
+
+    <p>
+    <h2>Audio Samples</h2>
+    </p>
+
+    <hr>
+
+    <table>
+        <tr>
+            <th style="text-align: center">Ground-Truth</th>
+            <th style="text-align: center">Voicebox Adapter</th>
+            <th style="text-align: center">Fine-Tune All</th>
+        </tr>
+        <tr>
+            <td style="text-align: center"><audio controls="controls">
+                    <source src="./expresso/ref_raw/s02_confused_00070.wav" autoplay />
+                </audio></td>
+            <td style="text-align: center"><audio controls="controls">
+                    <source src="./expresso/ref_raw/s02_confused_00070.wav" autoplay />
+                </audio></td>
+            <td style="text-align: center"><audio controls="controls">
+                    <source src="./expresso/ref_raw/s02_confused_00070.wav" autoplay />
+                </audio></td>
+        </tr>
+        <tr>
+            <th style="text-align: center">No Pre-training</th>
+            <th style="text-align: center">Voicebox</th>
+        </tr>
+        <tr>
+            <td style="text-align: center"><audio controls="controls">
+                    <source src="./expresso/ref_raw/s02_confused_00070.wav" autoplay />
+                </audio></td>
+            <td style="text-align: center"><audio controls="controls">
+                    <source src="./expresso/ref_raw/s02_confused_00070.wav" autoplay />
+                </audio></td>
+        </tr>
+    </table>
+
+    <b>Text</b>: <em>From tomorrow to next Tuesday, it's going to snow, but next *Wednesday*, it's just going to be
+        foggy.</em>
+
+
+    <hr>
+
+
+    <table>
+        <tr>
+            <th style="text-align: center">Ground-Truth</th>
+            <th style="text-align: center">Voicebox Adapter</th>
+            <th style="text-align: center">Fine-Tune All</th>
+        </tr>
+        <tr>
+            <td style="text-align: center"><audio controls="controls">
+                    <source src="./expresso/ref_raw/s04_default_emphasis_00094.wav" autoplay />
+                </audio></td>
+            <td style="text-align: center"><audio controls="controls">
+                    <source src="./expresso/ref_raw/s04_default_emphasis_00094.wav" autoplay />
+                </audio></td>
+            <td style="text-align: center"><audio controls="controls">
+                    <source src="./expresso/ref_raw/s04_default_emphasis_00094.wav" autoplay />
+                </audio></td>
+        </tr>
+        <tr>
+            <th style="text-align: center">No Pre-training</th>
+            <th style="text-align: center">Voicebox</th>
+        </tr>
+        <tr>
+            <td style="text-align: center"><audio controls="controls">
+                    <source src="./expresso/ref_raw/s04_default_emphasis_00094.wav" autoplay />
+                </audio></td>
+            <td style="text-align: center"><audio controls="controls">
+                    <source src="./expresso/ref_raw/s04_default_emphasis_00094.wav" autoplay />
+                </audio></td>
+        </tr>
+    </table>
+
+    <b>Text</b>: <em>Subtle it is *not.*</em>
+
+
+    <hr>
+
+
+    <table>
+        <tr>
+            <th style="text-align: center">Ground-Truth</th>
+            <th style="text-align: center">Voicebox Adapter</th>
+            <th style="text-align: center">Fine-Tune All</th>
+        </tr>
+        <tr>
+            <td style="text-align: center"><audio controls="controls">
+                    <source src="./expresso/ref_raw/s04_default_emphasis_00021.wav" autoplay />
+                </audio></td>
+            <td style="text-align: center"><audio controls="controls">
+                    <source src="./expresso/ref_raw/s04_default_emphasis_00021.wav" autoplay />
+                </audio></td>
+            <td style="text-align: center"><audio controls="controls">
+                    <source src="./expresso/ref_raw/s04_default_emphasis_00021.wav" autoplay />
+                </audio></td>
+        </tr>
+        <tr>
+            <th style="text-align: center">No Pre-training</th>
+            <th style="text-align: center">Voicebox</th>
+        </tr>
+        <tr>
+            <td style="text-align: center"><audio controls="controls">
+                    <source src="./expresso/ref_raw/s04_default_emphasis_00021.wav" autoplay />
+                </audio></td>
+            <td style="text-align: center"><audio controls="controls">
+                    <source src="./expresso/ref_raw/s04_default_emphasis_00021.wav" autoplay />
+                </audio></td>
+        </tr>
+    </table>
+
+    <b>Text</b>: <em>*How* do you think I feel!</em>
+
+
+    <hr>
+
+
+    <table>
+        <tr>
+            <th style="text-align: center">Ground-Truth</th>
+            <th style="text-align: center">Voicebox Adapter</th>
+            <th style="text-align: center">Fine-Tune All</th>
+        </tr>
+        <tr>
+            <td style="text-align: center"><audio controls="controls">
+                    <source src="./expresso/ref_raw/s04_confused_00374.wav" autoplay />
+                </audio></td>
+            <td style="text-align: center"><audio controls="controls">
+                    <source src="./expresso/ref_raw/s04_confused_00374.wav" autoplay />
+                </audio></td>
+            <td style="text-align: center"><audio controls="controls">
+                    <source src="./expresso/ref_raw/s04_confused_00374.wav" autoplay />
+                </audio></td>
+        </tr>
+        <tr>
+            <th style="text-align: center">No Pre-training</th>
+            <th style="text-align: center">Voicebox</th>
+        </tr>
+        <tr>
+            <td style="text-align: center"><audio controls="controls">
+                    <source src="./expresso/ref_raw/s04_confused_00374.wav" autoplay />
+                </audio></td>
+            <td style="text-align: center"><audio controls="controls">
+                    <source src="./expresso/ref_raw/s04_confused_00374.wav" autoplay />
+                </audio></td>
+        </tr>
+    </table>
+
+    <b>Text</b>: <em>How come you got *so* much stuff in your purse?</em>
+
+
+    <hr>
+
+
+    <table>
+        <tr>
+            <th style="text-align: center">Ground-Truth</th>
+            <th style="text-align: center">Voicebox Adapter</th>
+            <th style="text-align: center">Fine-Tune All</th>
+        </tr>
+        <tr>
+            <td style="text-align: center"><audio controls="controls">
+                    <source src="./expresso/ref_raw/s02_default_00342.wav" autoplay />
+                </audio></td>
+            <td style="text-align: center"><audio controls="controls">
+                    <source src="./expresso/ref_raw/s02_default_00342.wav" autoplay />
+                </audio></td>
+            <td style="text-align: center"><audio controls="controls">
+                    <source src="./expresso/ref_raw/s02_default_00342.wav" autoplay />
+                </audio></td>
+        </tr>
+        <tr>
+            <th style="text-align: center">No Pre-training</th>
+            <th style="text-align: center">Voicebox</th>
+        </tr>
+        <tr>
+            <td style="text-align: center"><audio controls="controls">
+                    <source src="./expresso/ref_raw/s02_default_00342.wav" autoplay />
+                </audio></td>
+            <td style="text-align: center"><audio controls="controls">
+                    <source src="./expresso/ref_raw/s02_default_00342.wav" autoplay />
+                </audio></td>
+        </tr>
+    </table>
+
+    <b>Text</b>: <em>No it won't be too cold, and there will be *no* frost in the morning.</em>
+
+
+    <hr>
+
+
+    <table>
+        <tr>
+            <th style="text-align: center">Ground-Truth</th>
+            <th style="text-align: center">Voicebox Adapter</th>
+            <th style="text-align: center">Fine-Tune All</th>
+        </tr>
+        <tr>
+            <td style="text-align: center"><audio controls="controls">
+                    <source src="./expresso/ref_raw/s04_enunciated_00090.wav" autoplay />
+                </audio></td>
+            <td style="text-align: center"><audio controls="controls">
+                    <source src="./expresso/ref_raw/s04_enunciated_00090.wav" autoplay />
+                </audio></td>
+            <td style="text-align: center"><audio controls="controls">
+                    <source src="./expresso/ref_raw/s04_enunciated_00090.wav" autoplay />
+                </audio></td>
+        </tr>
+        <tr>
+            <th style="text-align: center">No Pre-training</th>
+            <th style="text-align: center">Voicebox</th>
+        </tr>
+        <tr>
+            <td style="text-align: center"><audio controls="controls">
+                    <source src="./expresso/ref_raw/s04_enunciated_00090.wav" autoplay />
+                </audio></td>
+            <td style="text-align: center"><audio controls="controls">
+                    <source src="./expresso/ref_raw/s04_enunciated_00090.wav" autoplay />
+                </audio></td>
+        </tr>
+    </table>
+
+    <b>Text</b>: <em>So what did *he* do?</em>
+
+
+    <hr>
+
+
+    <table>
+        <tr>
+            <th style="text-align: center">Ground-Truth</th>
+            <th style="text-align: center">Voicebox Adapter</th>
+            <th style="text-align: center">Fine-Tune All</th>
+        </tr>
+        <tr>
+            <td style="text-align: center"><audio controls="controls">
+                    <source src="./expresso/ref_raw/s04_sad_00090.wav" autoplay />
+                </audio></td>
+            <td style="text-align: center"><audio controls="controls">
+                    <source src="./expresso/ref_raw/s04_sad_00090.wav" autoplay />
+                </audio></td>
+            <td style="text-align: center"><audio controls="controls">
+                    <source src="./expresso/ref_raw/s04_sad_00090.wav" autoplay />
+                </audio></td>
+        </tr>
+        <tr>
+            <th style="text-align: center">No Pre-training</th>
+            <th style="text-align: center">Voicebox</th>
+        </tr>
+        <tr>
+            <td style="text-align: center"><audio controls="controls">
+                    <source src="./expresso/ref_raw/s04_sad_00090.wav" autoplay />
+                </audio></td>
+            <td style="text-align: center"><audio controls="controls">
+                    <source src="./expresso/ref_raw/s04_sad_00090.wav" autoplay />
+                </audio></td>
+        </tr>
+    </table>
+
+    <b>Text</b>: <em>So what did *he* do?</em>
+
+
+    <hr>
+
+
+    <table>
+        <tr>
+            <th style="text-align: center">Ground-Truth</th>
+            <th style="text-align: center">Voicebox Adapter</th>
+            <th style="text-align: center">Fine-Tune All</th>
+        </tr>
+        <tr>
+            <td style="text-align: center"><audio controls="controls">
+                    <source src="./expresso/ref_raw/s04_laughing_00055.wav" autoplay />
+                </audio></td>
+            <td style="text-align: center"><audio controls="controls">
+                    <source src="./expresso/ref_raw/s04_laughing_00055.wav" autoplay />
+                </audio></td>
+            <td style="text-align: center"><audio controls="controls">
+                    <source src="./expresso/ref_raw/s04_laughing_00055.wav" autoplay />
+                </audio></td>
+        </tr>
+        <tr>
+            <th style="text-align: center">No Pre-training</th>
+            <th style="text-align: center">Voicebox</th>
+        </tr>
+        <tr>
+            <td style="text-align: center"><audio controls="controls">
+                    <source src="./expresso/ref_raw/s04_laughing_00055.wav" autoplay />
+                </audio></td>
+            <td style="text-align: center"><audio controls="controls">
+                    <source src="./expresso/ref_raw/s04_laughing_00055.wav" autoplay />
+                </audio></td>
+        </tr>
+    </table>
+
+    <b>Text</b>: <em>Why? 'Cause I'm telling the truth, *that* makes me a bitch?</em>
+
+
+    <hr>
+
+</body>
+
+</html>
